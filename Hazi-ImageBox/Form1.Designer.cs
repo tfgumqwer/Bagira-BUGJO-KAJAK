@@ -44,13 +44,14 @@
             0,
             0});
             this.numericUpDown.Name = "numericUpDown";
-            this.numericUpDown.Size = new System.Drawing.Size(180, 26);
+            this.numericUpDown.Size = new System.Drawing.Size(180, 30);
             this.numericUpDown.TabIndex = 0;
             this.numericUpDown.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.numericUpDown.ValueChanged += new System.EventHandler(this.numericUpDown_ValueChanged);
             // 
             // button_generate
             // 
@@ -59,23 +60,23 @@
             this.button_generate.Name = "button_generate";
             this.button_generate.Size = new System.Drawing.Size(112, 35);
             this.button_generate.TabIndex = 1;
-            this.button_generate.Text = "Generálás";
+            this.button_generate.Text = "general";
             this.button_generate.UseVisualStyleBackColor = true;
             this.button_generate.Click += new System.EventHandler(this.button_generate_Click);
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 155);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 64);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(745, 215);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1042, 405);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 370);
+            this.ClientSize = new System.Drawing.Size(1042, 469);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.button_generate);
             this.Controls.Add(this.numericUpDown);

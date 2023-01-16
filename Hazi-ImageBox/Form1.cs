@@ -19,6 +19,17 @@ namespace Hazi_ImageBox
         }
 
         int imageSize = 100;
+      
+        private void onClickEvent(object sender, EventArgs e)
+        {
+            var pic = (PictureBox)sender;
+            var images = Directory.GetFiles("imgs");
+            images = images.Where(i => i != pic.ImageLocation).ToArray();
+            var rand = new Random();
+            var randomImage = images[rand.Next(0, images.Length)];
+            pic.ImageLocation = randomImage;
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+        }
         private void button_generate_Click(object sender, EventArgs e)
         {
             int numberOfPics = (int)numericUpDown.Value;
@@ -33,15 +44,9 @@ namespace Hazi_ImageBox
             }
         }
 
-        private void onClickEvent(object sender, EventArgs e)
+        private void numericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            var pic = (PictureBox)sender;
-            var images = Directory.GetFiles("imgs");
-            images = images.Where(i => i != pic.ImageLocation).ToArray();
-            var rand = new Random();
-            var randomImage = images[rand.Next(0, images.Length)];
-            pic.ImageLocation = randomImage;
-            pic.SizeMode = PictureBoxSizeMode.Zoom;
+
         }
     }
 }
